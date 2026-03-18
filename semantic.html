@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우송대학교</title>
+    <style>
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        header img {
+            margin-bottom: 10px;
+        }
+
+        h1 { color: #000000; font-size: 24px; margin-bottom: 5px; }
+        h3 { border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 30px; }
+
+        nav ul { list-style: none; padding: 0; display: flex; justify-content: center; gap: 15px; }
+        nav a { text-decoration: none; color: #666; font-weight: bold; font-size: 14px; }
+        nav a:hover { color: #d32f2f; }
+
+        .form-group {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: inline-block;
+            width: 80px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="date"],
+        select {
+            width: calc(100% - 100px);
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        input:focus { border-color: #d32f2f; }
+
+        .animal-img {
+            border-radius: 10px;
+            margin: 10px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .submit-btn {
+            display: block;
+            background-color: #d32f2f;
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 30px;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover { background-color: #000000; }
+
+        hr { border: 0; border-top: 1px solid #eee; margin: 25px 0; }
+        footer { margin-top: 40px; color: #aaa; font-size: 12px; }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="https://www.cuk.edu/type/common/img/kor/info/coperUniv_logo17.png" width="80" height="80">
+            <h1>우송대학교</h1>
+            <nav>
+                <ul>
+                    <li><a href="https://github.com/sanguk-jeon" target="_blank">GitHub</a></li>
+                    <li><a href="https://wsinfo.wsu.ac.kr" target="_blank">LMS</a></li>
+                    <li><a href="https://smart.wsu.ac.kr/" target="_blank">Smart</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <hr>
+
+        <h3>사용자 정보 입력</h3>
+        <div class="form-group">
+            <label for="name">이름</label>
+            <input type="text" id="name" placeholder="홍길동">
+        </div>
+        <div class="form-group">
+            <label for="password">비밀번호</label>
+            <input type="password" id="password" placeholder="12345678!">
+        </div>
+        <div class="form-group">
+            <label>생일</label>
+            <input type="date" value="2007-01-01">
+        </div>
+        <div class="form-group">
+            <label>성별</label>
+            <input type="radio" name="sex" id="male"> <label for="male" style="width:auto; font-weight:normal;">남자</label>
+            <input type="radio" name="sex" id="female"> <label for="female" style="width:auto; font-weight:normal;">여자</label>
+        </div>
+        <div class="form-group">
+            <label for="email">이메일</label>
+            <input type="email" id="email" placeholder="admin@naver.com">
+        </div>
+
+        <p><mark>해당하는 학과를 선택해주세요.</mark></p>
+        <input type="radio" name="dept" value="1"> 컴퓨터소프트웨어학과
+        <input type="radio" name="dept" value="2"> 컴퓨터공학과
+
+        <hr>
+
+        <p><strong>좋아하는 동물을 고르세요. (복수 선택)</strong></p>
+        <div style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap;">
+            <span>
+                <input type="checkbox" name="prefer" value="1"> 고양이<br>
+                <img src="https://cdn.imweb.me/upload/S20220518fbea59f8e9828/77d99edcb5dbf.jpg" height="100" class="animal-img">
+            </span>
+            <span>
+                <input type="checkbox" name="prefer" value="2"> 강아지<br>
+                <img src="https://m.health.chosun.com/site/data/img_dir/2025/04/08/2025040803041_0.jpg" height="100" class="animal-img">
+            </span>
+        </div>
+
+        <hr>
+
+        <main>
+            <section>
+                <h3>Tech Stacks</h3>
+                <input type="checkbox" name="tech" value="1"> C
+                <input type="checkbox" name="tech" value="2"> Python
+                <input type="checkbox" name="tech" value="3"> Java
+                <input type="checkbox" name="tech" value="4"> HTML
+            </section>
+
+            <section>
+                <h3>통학 관련</h3>
+                <select style="width: 200px;">
+                    <option value="h1">본가</option>
+                    <option value="h2">자취</option>
+                    <option value="h3">기숙사 (청운, 유긱 등)</option>
+                </select>
+            </section>
+
+            <a href="javascript:alert('제출이 완료되었습니다!')" class="submit-btn">제출하기</a>
+        </main>
+
+        <footer>
+            <h5>© 2026 JEON SANG UK. All rights reserved.</h5>
+        </footer>
+    </div>
+</body>
+</html>
